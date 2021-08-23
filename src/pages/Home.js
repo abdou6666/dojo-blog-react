@@ -1,26 +1,21 @@
 import React from 'react'
 import { useState } from 'react';
-export default function Home() {
+import BlogList from '../components/BlogList';
+function Home() {
   //  let name = 'mario';
-    const [name, setName] = useState('mario');
-    const [age, setAge] = useState(25);
-    function clickHandler() {
-        if (name == 'mario') {
-             setName('lugia');
-            setAge(30);
-        }
-        else {
-             setName('mario');
-        setAge(25);
-        }
-       
-    }
+    const [blogs, setBlog] = useState(
+        [
+    { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
+    { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
+    { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
+  ]
+    );
+  
     return (
         <div className="home">
-            <h2>Homepage</h2>
-            <p>{name} is {age} years old.</p>
-            <button onClick={clickHandler}>Click me</button>
-            
+            <BlogList blogs={blogs}/>
+        
         </div>
-    )
+    );
 }
+export default Home;
