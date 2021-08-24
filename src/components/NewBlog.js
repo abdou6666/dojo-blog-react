@@ -4,7 +4,7 @@ const NewBlog = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('Yoshi');
-    const [isPending, setIsPending] = useState('false');
+    const [isPending, setIsPending] = useState(false);
     const history = useHistory();
 
     function titleHandle(e) {

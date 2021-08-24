@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NewBlog from './components/NewBlog';
 import BlogDetails from './components/BlogDetails';
+import NotFound from './components/Notfound';
 function App() {
 
   return (
